@@ -50,6 +50,10 @@
       :else
       [(dtype-proto/ecount item)])))
 
+(defn seqable?
+  [x]
+  (try (seq x) true (catch Exception e false)))
+
 
 (extend-type List
   dtype-proto/PShape

@@ -148,6 +148,10 @@
   `(if ~item 1 0))
 
 
+(defn boolean?
+  [x]
+  (instance? Boolean x))
+
 (defn ->number
   [item]
   (cond
